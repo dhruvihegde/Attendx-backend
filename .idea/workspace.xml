@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="20c9c4b0-30f5-4f71-b367-155473b0e0da" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../frontend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/AttendanceTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/AttendanceTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ChartCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/ChartCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/ExportButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/ExportButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Modal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/NotificationBell.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/NotificationBell.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/QRScanner.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/QRScanner.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Sidebar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/StatCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/StatCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/UserAvatar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/UserAvatar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/constants/roles.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/constants/roles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/constants/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/constants/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/context/AuthContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/context/AuthContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/context/NotificationContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/context/NotificationContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/context/QRSessionContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/context/QRSessionContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/hooks/useAttendance.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/hooks/useAttendance.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/hooks/useAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/hooks/useAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/hooks/useNotifications.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/hooks/useNotifications.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/hooks/useQRSession.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/hooks/useQRSession.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Admin/AdminDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Admin/AdminDashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Admin/ManageDepartments.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Admin/ManageDepartments.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Admin/ManageUsers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Admin/ManageUsers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Admin/TimetableManager.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Admin/TimetableManager.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Admin/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Admin/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Analytics/AnalyticsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Analytics/AnalyticsPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Analytics/analytics.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Analytics/analytics.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Auth/ForgotPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Auth/ForgotPassword.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Auth/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Auth/LoginPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Auth/auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Auth/auth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Capture/AttendanceCapture.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Capture/AttendanceCapture.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Capture/capture.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Capture/capture.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Faculty/AttendanceHistory.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Faculty/AttendanceHistory.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Faculty/FacultyDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Faculty/FacultyDashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Faculty/FacultyTimetable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Faculty/FacultyTimetable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Faculty/MarkAttendance.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Faculty/MarkAttendance.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Faculty/faculty.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Faculty/faculty.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Landing/LandingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Landing/LandingPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Landing/landing.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Landing/landing.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Notifications/NotificationsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Notifications/NotificationsPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Notifications/notifications.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Notifications/notifications.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Student/AttendanceView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Student/AttendanceView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Student/StudentDashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Student/StudentDashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Student/StudentTimetable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Student/StudentTimetable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/pages/Student/student.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/pages/Student/student.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/services/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/services/attendanceService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/services/attendanceService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/services/authService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/services/mockData.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/services/mockData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/services/reportService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/services/reportService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/services/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/services/userService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/utils/dateUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/utils/dateUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/utils/exportUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/utils/exportUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/utils/roleGuard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/utils/roleGuard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/vite.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dhruvihegde&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/bhaktigadge03/NoMoreProxy.git&quot;,
+    &quot;accountId&quot;: &quot;4fe27c25-ead7-40ea-93d5-1d179cf552ea&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3BhRVhu4yE4yaZ5SL2jRaO8vMY9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "frontend-dhruvi",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="20c9c4b0-30f5-4f71-b367-155473b0e0da" name="Changes" comment="" />
+      <created>1774939340556</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774939340556</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
