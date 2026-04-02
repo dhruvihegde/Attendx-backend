@@ -180,11 +180,12 @@ public class AttendanceController {
 
     /**
      * GET /api/attendance/analytics/summary
-     * AdminDashboard.jsx + AnalyticsPage.jsx — overall stats
+     * AdminDashboard.jsx + AnalyticsPage.jsx
      */
     @GetMapping("/analytics/summary")
     public ResponseEntity<?> getAnalyticsSummary() {
         List<User> students = userRepo.findByRole("student");
+        List<User> faculty  = userRepo.findByRole("faculty");
         List<AttendanceRecord> allRecords = attendanceRepo.findAll();
 
         int total   = allRecords.size();
@@ -199,13 +200,16 @@ public class AttendanceController {
         }).count();
 
         Map<String, Object> summary = new HashMap<>();
-        summary.put("totalStudents",    students.size());
+        summary.put("totalStudents",     students.size());
+        summary.put("totalFaculty",      faculty.size());
         summary.put("overallAttendance", overall);
-        summary.put("defaulters",       defaulters);
-        summary.put("eligibleStudents", students.size() - defaulters);
+        summary.put("defaulters",        defaulters);
+        summary.put("eligibleStudents",  students.size() - defaulters);
+        summary.put("hasData",           total > 0);
 
         return ResponseEntity.ok(ApiResponse.ok(summary));
     }
+
 
     /**
      * GET /api/attendance/analytics/subject-wise
