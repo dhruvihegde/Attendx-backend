@@ -103,13 +103,15 @@ public class AttendanceController {
     public ResponseEntity<?> getStudentStats(@PathVariable String studentId) {
         List<Subject> subjects = subjectRepo.findAll();
         List<SubjectStatsDto> stats = subjects.stream().map(sub -> {
+            // Total classes held for this subject = unique dates with any record
+            int totalClasses = (int) attendanceRepo.findBySubjectId(sub.getId()).stream()
+                    .map(AttendanceRecord::getDate).distinct().count();
             List<AttendanceRecord> recs = attendanceRepo
                     .findByStudentIdAndSubjectId(studentId, sub.getId());
-            int total   = recs.size();
             int present = (int) recs.stream().filter(r -> "present".equals(r.getStatus())).count();
-            int absent  = total - present;
-            int pct     = total > 0 ? Math.round((float) present / total * 100) : 0;
-            return new SubjectStatsDto(sub.getId(), sub.getName(), total, present, absent, pct);
+            int absent  = totalClasses - present;
+            int pct     = totalClasses > 0 ? Math.round((float) present / totalClasses * 100) : 0;
+            return new SubjectStatsDto(sub.getId(), sub.getName(), totalClasses, present, absent, pct);
         }).collect(Collectors.toList());
 
         return ResponseEntity.ok(ApiResponse.ok(stats));
@@ -192,11 +194,17 @@ public class AttendanceController {
         int present = (int) allRecords.stream().filter(r -> "present".equals(r.getStatus())).count();
         int overall = total > 0 ? Math.round((float) present / total * 100) : 0;
 
+        // Total classes held = unique dates across all records
+        List<String> allDates = attendanceRepo.findAll().stream()
+                .map(AttendanceRecord::getDate).distinct().collect(Collectors.toList());
+        int totalClasses = allDates.size();
+
         long defaulters = students.stream().filter(s -> {
             List<AttendanceRecord> r = attendanceRepo.findByStudentId(s.getId());
-            int t = r.size();
             int p = (int) r.stream().filter(rec -> "present".equals(rec.getStatus())).count();
-            return t > 0 && Math.round((float) p / t * 100) < 75;
+            // Students with no records have 0% — treat as defaulter if any classes held
+            int pct = totalClasses > 0 ? Math.round((float) p / totalClasses * 100) : 0;
+            return totalClasses > 0 && pct < 75;
         }).count();
 
         Map<String, Object> summary = new HashMap<>();
@@ -243,18 +251,22 @@ public class AttendanceController {
     @GetMapping("/analytics/student-wise")
     public ResponseEntity<?> getStudentWise() {
         List<User> students = userRepo.findByRole("student");
+        // Total unique dates any class was held
+        int totalClasses = (int) attendanceRepo.findAll().stream()
+                .map(AttendanceRecord::getDate).distinct().count();
+
         List<Map<String, Object>> result = students.stream().map(s -> {
                     List<AttendanceRecord> recs = attendanceRepo.findByStudentId(s.getId());
-                    int total   = recs.size();
                     int present = (int) recs.stream().filter(r -> "present".equals(r.getStatus())).count();
-                    int pct     = total > 0 ? Math.round((float) present / total * 100) : 0;
+                    // Percentage out of total classes held, not just their own records
+                    int pct = totalClasses > 0 ? Math.round((float) present / totalClasses * 100) : 0;
                     Map<String, Object> m = new LinkedHashMap<>();
-                    m.put("id",         s.getId());
-                    m.put("name",       s.getName());
-                    m.put("rollNo",     s.getRollNo());
-                    m.put("className",  s.getClassName());
-                    m.put("percentage", pct);
-                    m.put("isDefaulter", pct < 75);
+                    m.put("id",          s.getId());
+                    m.put("name",        s.getName());
+                    m.put("rollNo",      s.getRollNo());
+                    m.put("className",   s.getClassName());
+                    m.put("percentage",  pct);
+                    m.put("isDefaulter", totalClasses > 0 && pct < 75);
                     return m;
                 }).sorted((a, b) -> (int) b.get("percentage") - (int) a.get("percentage"))
                 .collect(Collectors.toList());
@@ -272,13 +284,14 @@ public class AttendanceController {
         List<Map<String, Object>> result = batches.stream().map(batch -> {
             List<User> batchStudents = userRepo.findByRoleAndClassName("student", batch);
             int totalPct = 0, defaulters = 0;
+            int totalClasses = (int) attendanceRepo.findAll().stream()
+                    .map(AttendanceRecord::getDate).distinct().count();
             for (User s : batchStudents) {
                 List<AttendanceRecord> recs = attendanceRepo.findByStudentId(s.getId());
-                int t = recs.size();
                 int p = (int) recs.stream().filter(r -> "present".equals(r.getStatus())).count();
-                int pct = t > 0 ? Math.round((float) p / t * 100) : 0;
+                int pct = totalClasses > 0 ? Math.round((float) p / totalClasses * 100) : 0;
                 totalPct += pct;
-                if (pct < 75) defaulters++;
+                if (totalClasses > 0 && pct < 75) defaulters++;
             }
             int avg = batchStudents.isEmpty() ? 0 : totalPct / batchStudents.size();
             Map<String, Object> m = new LinkedHashMap<>();
