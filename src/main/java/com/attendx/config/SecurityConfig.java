@@ -41,11 +41,17 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth -> auth
-                        // Public endpoints
+
+                        // ✅ Public endpoints
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/notifications/seed").permitAll()
+
+                        // 🔥 ADD THIS LINE (FIX)
+                        .requestMatchers("/api/attendance/analytics/**").permitAll()
+
                         // Admin only
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
+
                         // Faculty + Admin only
                         .requestMatchers("/api/attendance/mark").hasAnyRole("ADMIN", "FACULTY")
                         .requestMatchers("/api/qr/start").hasAnyRole("ADMIN", "FACULTY")
@@ -53,10 +59,12 @@ public class SecurityConfig {
                         .requestMatchers("/api/qr/history/**").hasAnyRole("ADMIN", "FACULTY")
                         .requestMatchers("/api/qr/session/**").hasAnyRole("ADMIN", "FACULTY")
                         .requestMatchers("/api/users/manage/**").hasAnyRole("ADMIN", "FACULTY")
-                        // All authenticated users (students + faculty + admin)
+
+                        // All authenticated users
                         .requestMatchers("/api/qr/active").authenticated()
                         .requestMatchers("/api/qr/mark").authenticated()
-                        // Everything else needs auth
+
+                        // Everything else
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
